@@ -1,0 +1,88 @@
+2023-03-26 20:02:01.659929 Zhixu Li has logged in.
+2023-03-26 20:02:10.517861 ShipCase2.txt was uploaded to the system.
+2023-03-26 20:02:10.521869 Balance was selected by operator.
+2023-03-26 20:02:12.435161 Balance is achievable.
+2023-03-26 20:02:12.435161 Estimated Total Time for Service: 10 minutes
+2023-03-26 20:02:12.439160 Container moved from: [1, 4] to [1, 7]
+2023-03-26 20:02:18.111704 Container moved from: [1, 9] to [1, 4]
+2023-03-26 20:02:19.380518 Balance service completed. Updated Manifest saved to D:/CodeFiles/CS179M/manifests/ShipCase2__NEW.txt
+2023-03-26 20:02:30.180514  has logged in.
+2023-03-26 20:02:42.478798 ShipCase1.txt was uploaded to the system.
+2023-03-26 20:02:42.483298 Balance was selected by operator.
+2023-03-26 20:02:44.020369 Balance is achievable.
+2023-03-26 20:02:44.020369 Estimated Total Time for Service: 4 minutes
+2023-03-26 20:02:44.023878 Container moved from: [1, 3] to [1, 7]
+2023-03-26 20:02:45.657231 Balance service completed. Updated Manifest saved to D:/CodeFiles/CS179M/manifests/ShipCase1__NEW.txt
+2023-03-26 20:02:47.644281  has logged in.
+2023-03-26 20:02:54.773216 ShipCase5.txt was uploaded to the system.
+2023-03-26 20:03:30.830752 Zhixu Li has logged in.
+2023-03-26 20:03:39.121397 ShipCase2.txt was uploaded to the system.
+2023-03-26 20:03:39.127904 Balance was selected by operator.
+2023-03-26 20:03:44.489241 Balance is achievable.
+2023-03-26 20:03:44.489241 Estimated Total Time for Service: 10 minutes
+2023-03-26 20:03:44.492252 Container moved from: [1, 4] to [1, 7]
+2023-03-26 20:03:49.802333 Container moved from: [1, 9] to [1, 4]
+2023-03-26 20:03:50.719476 Balance service completed. Updated Manifest saved to D:/CodeFiles/CS179M/manifests/ShipCase2__NEW.txt
+2023-03-26 20:04:03.993324 Zhaorui Yang has logged in.
+2023-03-26 20:04:10.506284 ShipCase5.txt was uploaded to the system.
+2023-03-26 20:04:10.510275 Balance was selected by operator.
+2023-03-26 20:04:12.023914 Balance is not achievable, SIFT will be performed instead.
+2023-03-26 20:04:12.023914 Estimated Total Time for Service: 6 minutes
+2023-03-26 20:04:12.026932 Container moved from: [1, 2] to [1, 6]
+2023-03-26 20:04:13.803197 SIFT service completed. Updated Manifest saved to D:/CodeFiles/CS179M/manifests/ShipCase5__NEW.txt
+2023-03-26 20:04:19.628493 Zhaorui Yang has logged in.
+2023-03-26 20:04:30.247928 ShipCase1.txt was uploaded to the system.
+2023-03-26 20:04:30.253528 Transfer was selected by operator.
+2023-03-26 20:04:43.172559 Selected Container Dog with weight 100 for unloading
+2023-03-26 20:04:56.170840 Selected Container i1 with weight 1 for loading.
+2023-03-26 20:04:56.171849 Selected Container 2 with weight 2 for loading.
+2023-03-26 20:04:56.191461 Estimated Total Time for Service: 49 minutes.
+2023-03-26 20:04:56.192466 Container moved from: [8, 1] to  [1, 11]
+2023-03-26 20:04:58.328573 Container moved from: [8, 1] to  [2, 12]
+2023-03-26 20:05:00.585437 Container moved from: [1, 3] to [8, 1]
+2023-03-26 20:05:05.446297 Transfer service completed. Updated Manifest saved to D:/CodeFiles/CS179M/manifests/ShipCase1__NEW.txt
+2023-03-26 20:05:31.580868 ShipCase1__NEW.txt was uploaded to the system.
+2023-03-26 20:05:31.588378 Transfer was selected by operator.
+2023-03-26 20:05:52.939912 Selected Container 2 with weight 2 for loading.
+2023-03-26 20:05:52.940922 Selected Container 2 with weight 2 for loading.
+2023-03-26 20:05:52.971488 Estimated Total Time for Service: 17 minutes.
+2023-03-26 20:05:52.971488 Container moved from: [8, 1] to [2, 1]
+2023-03-26 20:05:55.288563 Container moved from: [8, 1] to [2, 2]
+2023-03-26 20:05:56.347193 Transfer service completed. Updated Manifest saved to D:/CodeFiles/CS179M/manifests/ase1__NEW__NEW.txt
+2023-03-26 20:06:09.902298 ShipCase1.txt was uploaded to the system.
+2023-03-26 20:06:09.905811 Transfer was selected by operator.
+2023-03-26 20:06:23.115601 CS179M Team Reservation has logged in.
+2023-03-26 20:06:38.217742 ShipCase5.txt was uploaded to the system.
+2023-03-26 20:06:38.221733 Balance was selected by operator.
+2023-03-26 20:06:42.768070 Balance is not achievable, SIFT will be performed instead.
+2023-03-26 20:06:42.768070 Estimated Total Time for Service: 6 minutes
+2023-03-26 20:06:42.771063 Container moved from: [1, 2] to [1, 6]
+2023-03-26 20:06:44.847798 SIFT service completed. Updated Manifest saved to D:/CodeFiles/CS179M/manifests/ShipCase5__NEW.txt
+2023-03-26 20:06:56.810080 Zhaorui Yang has logged in.
+2023-03-26 20:07:35.479516 ShipCase5.txt was uploaded to the system.
+2023-03-26 20:07:35.483528 Balance was selected by operator.
+2023-03-26 20:07:38.357705 Balance is not achievable, SIFT will be performed instead.
+2023-03-26 20:07:38.359701 Estimated Total Time for Service: 34 minutes
+2023-03-26 20:07:38.379741 Container moved from: [1, 6] to [1, 7]
+2023-03-26 20:07:40.260973 Container moved from: [1, 2] to [1, 6]
+2023-03-26 20:07:56.947597 1 has logged in.
+2023-03-26 20:08:03.817189 ShipCase5.txt was uploaded to the system.
+2023-03-26 20:08:03.821192 Balance was selected by operator.
+2023-03-26 20:08:16.457686 Input 2 has logged in.
+2023-03-26 20:08:22.807830 ShipCase5.txt was uploaded to the system.
+2023-03-26 20:08:22.810831 Balance was selected by operator.
+2023-03-26 20:08:30.359705 Balance is not achievable, SIFT will be performed instead.
+2023-03-26 20:08:30.359705 Estimated Total Time for Service: 6 minutes
+2023-03-26 20:08:30.363310 Container moved from: [1, 2] to [1, 6]
+2023-03-26 20:08:31.529562 SIFT service completed. Updated Manifest saved to D:/CodeFiles/CS179M/manifests/ShipCase5__NEW.txt
+2023-03-26 20:08:37.243409 Input 2 has logged in.
+2023-03-26 20:08:45.537759 ShipCase1.txt was uploaded to the system.
+2023-03-26 20:08:45.540768 Transfer was selected by operator.
+2023-03-26 20:08:54.156710 Selected Container Dog with weight 100 for unloading
+2023-03-26 20:08:58.679528 Selected Container 1 with weight 2 for loading.
+2023-03-26 20:08:58.688079 Estimated Total Time for Service: 30 minutes.
+2023-03-26 20:08:58.689076 Container moved from: [8, 1] to  [2, 12]
+2023-03-26 20:09:13.834527 1 has logged in.
+2023-03-26 20:09:22.606286 1 has logged in.
+2023-03-26 20:09:29.298523 ShipCase1.txt was uploaded to the system.
+2023-03-26 20:09:29.314575 Transfer was selected by operator.
