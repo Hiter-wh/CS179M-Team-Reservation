@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href='/static/style.css' />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<title>Balancing Container</title>
+		<style>
+         input[type="button"] {
+            background-color: #4CAF50; /* Green background color */
+            border: none;
+            color: white; /* White text color */
+            padding: 15px 32px; /* Padding around the button */
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 24px; /* Large font size */
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 12px; /* Rounded corners */
+        }
+
+        input[type="button"]:hover {
+            background-color: #45a049; /* Darker green background color when hovering */
+        }
+
+
+
+			#submitBtn, #commentBox {
+				display: none;
+			}
+
+			#commentBox {
+				width: 70%;
+				margin: 0 auto;
+				font-size: 20px;
+				padding: 10px;
+			}
+
+			button, input[type="submit"] {
+				font-size: 24px;
+				padding: 10px 20px;
+				background-color: #4CAF50;
+				border: none;
+				color: white;
+				text-decoration: none;
+				cursor: pointer;
+				border-radius: 12px;
+				transition: background-color 0.3s;
+			}
+
+			button:hover, input[type="submit"]:hover {
+				background-color: #45a049;
+			}
+
+			#commentBoxId {
+				width: 100%;
+				height: 50px;
+				font-size: 20px;
+				padding: 10px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1> Balancing Container</h1>
+		<div class="containers">
+			<div class="gridContainer">
+				{% for i,row in enumerate(ship_grid) %}
+					<div class="rowContainer">
+					{% for j,slot in enumerate(row) %}
+						{% if slot.hasContainer == True and slot.available == False %}
+							{% if slot.container.name_check == True %}
+								<div class="nonClickContainerWrapper" id="{{slot.container.name_adj[0]}}">{{slot.container.name_adj[0]}}</div>
+							{% else %}
+								<div class="nonClickContainerWrapper"id="{{slot.container.name}}">{{slot.container.name}}</div>
+							{% endif %}
+						{% elif slot.hasContainer == False and slot.available == False %}
+							<div class="nonClickUnavailableSlotWrapper"></div>
+						{% else %}
+							<div class="nonClickemptySlotWrapper" id="[{{i}}, {{j}}]"></div>
+						{% endif %}
+					{% endfor %}
+					</div>
+				{% endfor %}
+			</div>
+			<div class="moveListContainer">
+				<strong>This is the intial container ship contents and layout.</strong>
+				<strong>Please press the "Next" Button for start the balancing service.</strong>
+			</div>
+		</div>
+		<div class="boxTitle"> <h2>Comment Box</h2> </div>
+				<div class="formContainer">
+
+					<form class="formClass" action="http://localhost:5000/startbalance" method="POST" enctype="multipart/form-data">
+						<div class="submitWrapper">
+							<input type="submit" value="Next">
+						</div>
+					</form>
+				</div>
+
+<form method="POST" action="http://localhost:5000/openlog" id="logForm">
+        <input type="button" value="Write into Log" onclick="submitFormInNewWindow();">
+    </form>
+
+    <script>
+        function submitFormInNewWindow() {
+            var form = document.getElementById('logForm');
+            var newWindow = window.open('', 'logWindow', 'width=600,height=400,top=100,left=100');
+            form.target = 'logWindow';
+            form.submit();
+            newWindow.focus();
+        }
+    </script>
+
+
+    </body>
+	<script src="{{ url_for('static', filename='grid.js') }}"></script>
+</html>

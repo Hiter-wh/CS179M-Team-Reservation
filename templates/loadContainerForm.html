@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css'>
+		<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+		<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js'></script>
+		<style>
+         input[type="button"] {
+            background-color: #4CAF50; /* Green background color */
+            border: none;
+            color: white; /* White text color */
+            padding: 15px 32px; /* Padding around the button */
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 24px; /* Large font size */
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 12px; /* Rounded corners */
+        }
+
+        input[type="button"]:hover {
+            background-color: #45a049; /* Darker green background color when hovering */
+        }
+
+
+
+			#submitBtn, #commentBox {
+				display: none;
+			}
+
+			#commentBox {
+				width: 70%;
+				margin: 0 auto;
+				font-size: 20px;
+				padding: 10px;
+			}
+
+			button, input[type="submit"] {
+				font-size: 24px;
+				padding: 10px 20px;
+				background-color: #4CAF50;
+				border: none;
+				color: white;
+				text-decoration: none;
+				cursor: pointer;
+				border-radius: 12px;
+				transition: background-color 0.3s;
+			}
+
+			button:hover, input[type="submit"]:hover {
+				background-color: #45a049;
+			}
+
+			#commentBoxId {
+				width: 100%;
+				height: 50px;
+				font-size: 20px;
+				padding: 10px;
+			}
+		</style>
+		<title>Loading Containers</title>
+	</head>
+
+	<body>
+		<div class="container mt-5">
+			<h1 class="text-center">Transfering Container</h1>
+			<form class="formClass" action="http://localhost:5000/transferprocessing" method="POST" enctype="multipart/form-data" name="loadForm">
+				<div class="container-pagination">
+					{% for i,element in enumerate(load_coords)  %}
+						<div class="form-page" id="form-page-{{i}}" {% if i != 0 %}style="display:none;"{% endif %}>
+							<div class="form-style-1">
+								<h5>Information for Container that is going to be loaded in slot {{adjusted_load_coords[i]}}</h5>
+								<label>Name of Container<span class="required">*</span></label>
+								<input type="text" name="nameform{{i}}" class="field-long" placeholder="Name" data-position="{{element}}">
+								<label>Weight of Container<span class="required">*</span></label>
+								<input type="text" name="weightform{{i}}" class="field-long" placeholder="Weight">
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+				<div class="text-center">
+					<input type="submit" value="Submit" class="btn btn-primary mt-3">
+				</div>
+				<div class="text-center navigation-buttons">
+					<button type="button" class="btn btn-secondary" id="previousBtn" disabled>Previous</button>
+					<button type="button" class="btn btn-secondary" id="nextBtn">Next</button>
+				</div>
+			</form>
+		</div>
+		<script>
+			$(document).ready(function() {
+				let totalForms = {{ load_coords|length }};
+				let currentPage = 0;
+
+				$('#nextBtn').click(function() {
+					if (currentPage < totalForms - 1) {
+						currentPage++;
+						$('.form-page').hide();
+					$('#form-page-' + currentPage).show();
+
+					if (currentPage === totalForms - 1) {
+						$('#nextBtn').attr('disabled', true);
+					}
+
+					if (currentPage > 0) {
+						$('#previousBtn').attr('disabled', false);
+					}
+				}
+			});
+
+			$('#previousBtn').click(function() {
+				if (currentPage > 0) {
+					currentPage--;
+					$('.form-page').hide();
+					$('#form-page-' + currentPage).show();
+
+					if (currentPage === 0) {
+						$('#previousBtn').attr('disabled', true);
+					}
+
+					if (currentPage < totalForms - 1) {
+						$('#nextBtn').attr('disabled', false);
+					}
+				}
+			});
+		});
+	</script>
+    <form method="POST" action="http://localhost:5000/openlog" id="logForm">
+        <input type="button" value="Write into Log" onclick="submitFormInNewWindow();">
+    </form>
+
+    <script>
+        function submitFormInNewWindow() {
+            var form = document.getElementById('logForm');
+            var newWindow = window.open('', 'logWindow', 'width=600,height=400,top=100,left=100');
+            form.target = 'logWindow';
+            form.submit();
+            newWindow.focus();
+        }
+    </script>
+</body>
+</html>
