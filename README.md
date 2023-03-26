@@ -18,7 +18,12 @@ Then,
 pip install numpy
 pip install flask
 ```
-
+Note that in app.py:
+```
+#-------------------------NOTE: Change this to your own path-------------------------#
+base="D:/CodeFiles/CS179M/"
+#-------------------------NOTE: Change this to your own path-------------------------#
+```
 # Run
 
 ```
