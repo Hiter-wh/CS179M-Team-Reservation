@@ -5,13 +5,13 @@ https://docs.google.com/presentation/d/150yBp6TQSj0RlzVENqcyEtDE5t0aDaf20OealPUh
 
 ## Configuration and prerequsite
 ```shell
-python3 -m venv /path/to/new/virtual/environment/CS180
+python3 -m venv /path/to/new/virtual/environment/CS179m
 source /path/to/venv/bin/activate
 ```
 Or,
 ```shell
-conda create -n CS180 python=3
-conda activate CS180
+conda create -n CS179m python=3
+conda activate CS179m
 ```
 Then,
 ```shell
