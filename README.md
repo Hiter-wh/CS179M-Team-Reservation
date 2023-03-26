@@ -8,7 +8,14 @@ $cd your project directroy
 $pip install flask
 ```
 Before running, you need to change the base address,
-like: 
+```
+#-------------------------NOTE: Change this to your own path-------------------------#
+base="D:/CodeFiles/CS179M/"
+#-------------------------NOTE: Change this to your own path-------------------------#
+```
+in app.py
+
+Then you can 
 ```
 $flask run
 ```
