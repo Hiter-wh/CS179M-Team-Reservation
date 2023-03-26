@@ -6,5 +6,10 @@ https://docs.google.com/presentation/d/150yBp6TQSj0RlzVENqcyEtDE5t0aDaf20OealPUh
 ```
 $cd your project directroy
 $pip install flask
+```
+Before running, you need to change the base address,
+like: 
+```
 $flask run
 ```
+
