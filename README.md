@@ -10,7 +10,7 @@ $pip install flask
 Before running, you need to change the base address,
 ```
 #-------------------------NOTE: Change this to your own path-------------------------#
-base="D:/CodeFiles/CS179M/"
+base="D:/CodeFiles/CS179M/"# to your own address
 #-------------------------NOTE: Change this to your own path-------------------------#
 ```
 in app.py
